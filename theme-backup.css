@@ -1,0 +1,90 @@
+/* ChatStyle 插件主题配色备份文件 */
+/* 创建时间: 2024年 */
+/* 用途: 备份所有主题和标题栏配色，不影响程序运行 */
+
+/* ===== 预设主题配色备份 ===== */
+
+/* 默认主题 */
+.chat-theme-default {
+  --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --dark-background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --accent-color: #3498db;
+  --left-color: #ecf0f1;
+  --right-color: #3498db;
+}
+
+/* 蓝色主题 */
+.chat-theme-blue {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --dark-background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  --accent-color: #3498db;
+  --left-color: #ecf0f1;
+  --right-color: #3498db;
+}
+
+/* 绿色主题 */
+.chat-theme-green {
+  --background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  --dark-background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+  --accent-color: #27ae60;
+  --left-color: #ecf0f1;
+  --right-color: #27ae60;
+}
+
+/* 紫色主题 */
+.chat-theme-purple {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --dark-background: linear-gradient(135deg, #2c3e50 0%, #8e44ad 100%);
+  --accent-color: #9b59b6;
+  --left-color: #ecf0f1;
+  --right-color: #9b59b6;
+}
+
+/* 橙色主题 */
+.chat-theme-orange {
+  --background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --dark-background: linear-gradient(135deg, #2c3e50 0%, #e67e22 100%);
+  --accent-color: #f39c12;
+  --left-color: #ecf0f1;
+  --right-color: #f39c12;
+}
+
+/* 粉色主题 */
+.chat-theme-pink {
+  --background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --dark-background: linear-gradient(135deg, #2c3e50 0%, #e91e63 100%);
+  --accent-color: #e91e63;
+  --left-color: #ecf0f1;
+  --right-color: #e91e63;
+}
+
+/* 深色主题 */
+.chat-theme-dark {
+  --background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --dark-background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+  --accent-color: #95a5a6;
+  --left-color: #34495e;
+  --right-color: #95a5a6;
+}
+
+/* ===== 标题栏配色备份 ===== */
+.chat-titlebar-light {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 240, 0.9) 100%);
+  color: #2c3e50;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chat-titlebar-dark {
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 73, 94, 0.9) 100%);
+  color: #ecf0f1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== 备注信息 ===== */
+/*
+此备份文件包含ChatStyle插件的完整主题配色方案
+- 7个预设主题的完整配色
+- 浅色和深色模式的标题栏配色
+- 所有CSS变量的备份
+- 不会影响插件正常运行
+*/

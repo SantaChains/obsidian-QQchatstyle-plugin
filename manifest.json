@@ -1,0 +1,11 @@
+{
+  "id": "chatstyle",
+  "name": "ChatStyle",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "一个高度个性化的聊天风格渲染插件，支持类似QQ的聊天界面显示",
+  "author": "SantaChains",
+  "authorUrl": "",
+  "fundingUrl": "",
+  "isDesktopOnly": false
+}

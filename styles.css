@@ -1,0 +1,237 @@
+/* ChatStyle 插件样式 */
+.chat-style-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 深色模式适配 */
+.theme-dark .chat-style-container {
+  color: var(--text-normal);
+}
+
+/* 标题栏样式增强 */
+.chat-title-bar {
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* 玻璃态效果支持 */
+.chat-title-bar.glassmorphism {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* 霓虹效果支持 */
+.chat-title-bar.neon-effect {
+  box-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  from {
+    box-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+  }
+  to {
+    box-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor;
+  }
+}
+
+/* 渐变动画效果 */
+.chat-title-bar.gradient-animated {
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 标题栏文字样式增强 */
+.chat-title-text {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* 深色模式下的标题栏文字 */
+.theme-dark .chat-title-text {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 标题栏悬停效果 */
+.chat-title-bar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chat-title-bar:hover .chat-title-text {
+  transform: scale(1.02);
+}
+
+/* 动画效果 */
+.chat-message {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 气泡悬停效果 */
+.chat-bubble {
+  transition: all 0.2s ease;
+}
+
+.chat-bubble:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 引用消息样式增强 */
+.chat-quote {
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-quote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #007bff, #0056b3);
+}
+
+/* 头像动画 */
+.chat-avatar {
+  transition: all 0.2s ease;
+}
+
+.chat-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* 滚动条美化 */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+  border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+}
+
+/* 代码块样式增强 */
+.chat-content pre {
+  position: relative;
+  margin: 0.8em 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chat-content pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+  line-height: 1.5;
+  font-size: 0.85em;
+  tab-size: 4;
+}
+
+/* 代码语言标签 */
+.code-language-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 8px;
+  font-size: 0.7em;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-bottom-left-radius: 6px;
+  font-family: var(--font-monospace);
+  opacity: 0.8;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+/* 复制按钮 */
+.code-copy-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 8px;
+  font-size: 0.8em;
+  background: transparent;
+  border: none;
+  color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.code-copy-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 代码块主题 - GitHub */
+.code-theme-github.left-message-code code {
+  background: rgba(246, 248, 250, 0.8);
+  color: #24292e;
+}
+
+.code-theme-github.right-message-code code {
+  background: rgba(13, 17, 23, 0.8);
+  color: #c9d1d9;
+}
+
+/* 代码块主题 - VS Code */
+.code-theme-vscode code {
+  background: rgba(30, 30, 30, 0.8);
+  color: #d4d4d4;
+}
+
+/* 代码块主题 - Dracula */
+.code-theme-dracula code {
+  background: rgba(40, 42, 54, 0.8);
+  color: #f8f8f2;
+}
